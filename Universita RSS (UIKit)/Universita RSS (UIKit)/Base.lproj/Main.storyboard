@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="beo-CU-6BF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="oSV-uc-sqT">
+            <objects>
+                <viewController id="beo-CU-6BF" customClass="ViewController" customModule="Universita_RSS__UIKit_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DSm-iX-lFD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9g-DR-b5O">
+                                <rect key="frame" x="20" y="54" width="374" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoUniversita" translatesAutoresizingMaskIntoConstraints="NO" id="ihm-hu-3Mj">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="AGY-JU-Zs8"/>
+                                            <constraint firstAttribute="width" constant="100" id="REj-Cp-q0R"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Università RSS" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5X-r0-e4x">
+                                        <rect key="frame" x="100" y="0.0" width="274" height="100"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hqx-vJ-s8D">
+                                <rect key="frame" x="0.0" y="162" width="414" height="734"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsRowCell" rowHeight="132" id="2bG-yk-y9V" customClass="FeedItemRow" customModule="Universita_RSS__UIKit_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="132"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2bG-yk-y9V" id="PAy-wV-hYo">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sf-03-7eD">
+                                                    <rect key="frame" x="20" y="11" width="359" height="80"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXh-he-4jj">
+                                                    <rect key="frame" x="313" y="101.5" width="86" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5sf-03-7eD" secondAttribute="bottom" constant="30" id="FWo-7F-yji"/>
+                                                <constraint firstItem="5sf-03-7eD" firstAttribute="top" secondItem="PAy-wV-hYo" secondAttribute="topMargin" id="Khe-Rz-rVq"/>
+                                                <constraint firstAttribute="bottom" secondItem="nXh-he-4jj" secondAttribute="bottom" constant="10" id="L6f-MM-Z9v"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5sf-03-7eD" secondAttribute="trailing" constant="15" id="SMb-Ji-ysT"/>
+                                                <constraint firstAttribute="trailing" secondItem="nXh-he-4jj" secondAttribute="trailing" constant="15" id="VxK-RV-GrZ"/>
+                                                <constraint firstItem="5sf-03-7eD" firstAttribute="leading" secondItem="PAy-wV-hYo" secondAttribute="leadingMargin" id="Zjq-Kn-JK1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="nXh-he-4jj" id="sIr-qx-qvo"/>
+                                            <outlet property="titleLabel" destination="5sf-03-7eD" id="iS0-0w-lvT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hL0-oE-Eqi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f9g-DR-b5O" firstAttribute="leading" secondItem="hL0-oE-Eqi" secondAttribute="leading" constant="20" id="JTB-13-4aN"/>
+                            <constraint firstItem="hqx-vJ-s8D" firstAttribute="top" secondItem="f9g-DR-b5O" secondAttribute="bottom" constant="8" symbolic="YES" id="Jqo-D3-UdO"/>
+                            <constraint firstItem="f9g-DR-b5O" firstAttribute="top" secondItem="hL0-oE-Eqi" secondAttribute="top" constant="10" id="LbB-Qn-Jxo"/>
+                            <constraint firstAttribute="bottom" secondItem="hqx-vJ-s8D" secondAttribute="bottom" id="NOC-eU-oAe"/>
+                            <constraint firstItem="hqx-vJ-s8D" firstAttribute="trailing" secondItem="hL0-oE-Eqi" secondAttribute="trailing" id="fw0-Kq-oKs"/>
+                            <constraint firstItem="hL0-oE-Eqi" firstAttribute="trailing" secondItem="f9g-DR-b5O" secondAttribute="trailing" constant="20" id="k4E-zO-7Zx"/>
+                            <constraint firstItem="hqx-vJ-s8D" firstAttribute="leading" secondItem="hL0-oE-Eqi" secondAttribute="leading" id="ulF-Rc-jc3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="hqx-vJ-s8D" id="OYR-LI-kpH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KEU-q8-i3R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="135"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logoUniversita" width="150" height="150"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
