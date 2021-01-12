@@ -9,8 +9,6 @@ import Foundation
 import FeedKit
 
 let feedURL = URL(string: "https://actu.universita.corsica/plugins/actu/xml/ricerca_actus.xml")
-let parser = FeedParser(URL: feedURL!)
-
 
 class ViewModel: ObservableObject {
     
@@ -21,6 +19,7 @@ class ViewModel: ObservableObject {
     }
     
     func fetchFeed() {
+        let parser = FeedParser(URL: feedURL!)
         parser.parseAsync(queue: DispatchQueue.global(qos: .userInitiated)) { (result) in
             print(result)
             switch result {
